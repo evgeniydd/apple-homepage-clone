@@ -22,3 +22,15 @@ dropdownArray.forEach(function(el) {
     }
   };
 });
+
+const menu_icon = document.getElementById('nav-icon');
+const navigation = document.querySelector('.main-nav');
+const overflow = document.body;
+
+menu_icon.addEventListener('click', getMenu);
+
+function getMenu() {
+  menu_icon.classList.toggle('open');
+  navigation.classList.toggle('show');
+  overflow.classList.toggle('nonscroll');
+}
